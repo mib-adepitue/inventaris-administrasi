@@ -14,11 +14,11 @@ class InventarisMiddleware
      * @return mixed
      */
     public function handle($request, Closure $next) {
-        if ($request->user() && $request->user()->jabatan == 'kord_tools' || $request->user() && $request->user()->jabatan == 'staff_tools') {
+        if ($request->user() && $request->user()->jabatan == 'kord_kesek' || $request->user() && $request->user()->jabatan == 'staff_kesek') {
 
                 return $next($request);
         }
-            return Response(array('status' => 'error' , 'pesan' => 'Hanya Divisi Tools And Properties' ));
+            return Response(array('status' => 'error' , 'pesan' => 'Hanya Divisi Kesekretariatan' ));
             
     }
 }

@@ -62,7 +62,9 @@ class Transaksi extends Controller
         $cek = \App\Databarang::where('id', '=', $id)->pluck('stok')->first();
         // $hasil = json_encode($cek);
         // return $cek;
-        if($request->jumlah > $cek) {
+        if ($request->jumlah < 1) {
+            return $arrayName = array('status' => 'error' , 'pesan' => 'Minimal Peminjaman 1 unit' );
+        } else if ($request->jumlah > $cek) {
             return $arrayName = array('status' => 'error' , 'pesan' => 'Stok Tidak Cukup' );
         }
         $update_barang = \App\Databarang::findOrfail($id);

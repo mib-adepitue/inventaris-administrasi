@@ -19,9 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum("jabatan", ['kord_dpo', 'dpo', 'kord_tim_ahli', 'tim_ahli', 'ketum', 'sekum', 'bendum', 'wk1', 'wk2', 'kord_keorganisasian', 'staff_keorganisasian', 'kord_P&R', 'staff_P&R', 'kord_tools', 'staff_tools', 'kord_keilmuan', 'kord_program', 'staff_program', 'kord_jaringan', 'staff_jaringan', 'kord_hardware', 'staff_hardware', 'kord_multimedia', 'staff_multimedia', 'all_crew']);
+            $table->enum("jabatan", ['kord_mpo', 'mpo', 'ketum', 'sekum', 'bendum', 'wk', 'kabid_keorganisasian', 'kabid', 'kord_pengkaderan', 'staff_pengkaderan', 'kord_humas', 'staff_humas', 'kord_iptek', 'staff_iptek', 'kord_kesek', 'staff_kesek', 'anggota']);
             $table->string("phone");
-            $table->string("noreg");
+            $table->string("noreg")->nullable();
             $table->string("status_surat")->nullable();
             $table->string("foto")->nullable();
             $table->rememberToken();

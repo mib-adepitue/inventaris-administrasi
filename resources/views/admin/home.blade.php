@@ -5,10 +5,7 @@
 @section('content')
 		<!-- home -->
 		<div class="text-center">
-			<img src="{{ asset('gentella/images/logoKDCW.png') }}" alt="KeDai Computerworks" class="logos">
-		</div>
-		<div class="text-center">
-			<img src="{{ asset('gentella/images/header-logo2.png') }}" alt="KeDai" class="image-header">
+			<img src="{{ asset('gentella/images/logo.jpeg') }}" alt="KeDai Computerworks" class="logos">
 		</div>
 		<!-- akhir home -->
 

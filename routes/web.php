@@ -1,6 +1,6 @@
 <?php
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 // Auth::routes();
 
 Route::get('/', 'HomeController@index');
@@ -30,14 +30,14 @@ Route::get('table_surat_keluar', 'Persuratan@surat_keluar')->name('surat_keluar'
 
 
 
-// DIVIS TOOLS AND PROPERTIES
+// DIVISi KESEKRETARIATAN
 Route::group(['middleware' => 'App\Http\Middleware\InventarisMiddleware'], function() {
 	//CRUD Barang
 	Route::post('data-barang', 'DataBarang@store')->name('data-barang.store');
 	Route::get('data-barang/{id}/edit', 'DataBarang@edit');
 	Route::put('data-barang/{id}', 'DataBarang@update');
-	Route::delete('data-barang/{id}', 'Databarang@destroy');
-	Route::get('cekstok/{id}', 'Databarang@cekstok');
+	Route::delete('data-barang/{id}', 'DataBarang@destroy');
+	Route::get('cekstok/{id}', 'DataBarang@cekstok');
 
 	//CRUD Peminjaman
 	Route::post('peminjaman', 'Transaksi@store')->name('peminjaman.store');

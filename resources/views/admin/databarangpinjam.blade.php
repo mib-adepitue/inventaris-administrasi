@@ -149,8 +149,8 @@
 @section('js')
     <script type="text/javascript">
         function hapus_cek(jabatan) {
-  if(jabatan != 'kord_tools') {
-    wrong_role('Hanya Koordinator Tools And Properties');
+  if(jabatan != 'kord_kesek') {
+    wrong_role('Hanya Koordinator Kesekretariatan');
    } else {
     $(document).on('click', '#del_pernah_pinjam', function(){
       // e.preventDefault();

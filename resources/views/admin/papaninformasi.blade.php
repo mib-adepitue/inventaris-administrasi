@@ -163,18 +163,18 @@ aria-hidden="true">
     })
 
     function cek(jabatan) {
-   if(jabatan == 'kord_tools' || jabatan == 'staff_tools' ) {
+   if(jabatan == 'kord_kesek' || jabatan == 'staff_kesek' ) {
     $('#confirm-add').modal('show');
    } else {
-    wrong_role('Hanya Divisi Tools And Properties');
+    wrong_role('Hanya Divisi Kesekretariatan');
    }
  }
 
     function hapus(jabatan) {
-      if(jabatan == 'kord_tools' || jabatan == 'staff_tools' ) {
+      if(jabatan == 'kord_kesek' || jabatan == 'staff_kesek' ) {
          hapus_data();
       } else {
-          wrong_role('Hanya Divisi Tools And Properties');
+          wrong_role('Hanya Divisi Kesekretariatan');
       }
     }
  

@@ -10,7 +10,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="{{ asset('gentella/images/logoKDCW.png') }}" type="image/ico" />
+  <link rel="icon" href="{{ asset('gentella/images/logo.jpeg') }}" type="image/ico" />
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   
@@ -26,17 +26,11 @@
   $role = Auth::user()->jabatan;
 @endphp
 @switch($role)
-    @case('kord_dpo')
-        @php $jabatan = 'Koordinator DPO'; @endphp
+    @case('kord_mpo')
+        @php $jabatan = 'Koordinator MPO'; @endphp
         @break
-    @case('dpo')
-        @php $jabatan = 'DPO'; @endphp
-        @break
-    @case('kord_tim_ahli')
-        @php $jabatan = 'Koordinator Tim Ahli'; @endphp
-        @break
-    @case('tim_ahli')
-        @php $jabatan = 'Tim Ahli'; @endphp
+    @case('mpo')
+        @php $jabatan = 'MPO'; @endphp
         @break
     @case('ketum')
         @php $jabatan = 'Ketua Umum'; @endphp
@@ -47,59 +41,41 @@
     @case('bendum')
         @php $jabatan = 'Bendahara Umum'; @endphp
         @break
-    @case('wk1')
-        @php $jabatan = 'Wakil Ketua I'; @endphp
+    @case('wk')
+        @php $jabatan = 'Wakil Ketua '; @endphp
         @break
-    @case('wk2')
-        @php $jabatan = 'Wakil Ketua II'; @endphp
-        @break    
-    @case('kord_keorganisasian')
-        @php $jabatan = 'Koordinator Keorganisasian'; @endphp
+    @case('kabid_keorganisasian')
+        @php $jabatan = 'Kabid Keorganisasian'; @endphp
         @break
-    @case('staff_keorganisasian')
-        @php $jabatan = 'Staff Keorganisasian'; @endphp
+    @case('kabid')
+        @php $jabatan = 'Kabid '; @endphp
+        @break      
+    @case('kord_pengkaderan')
+        @php $jabatan = 'Koordinator Pengkaderan'; @endphp
         @break
-    @case('kord_P&R')
-        @php $jabatan = 'Koordinator Public & Relation'; @endphp
+    @case('staff_pengkaderan')
+        @php $jabatan = 'Staff Pengkaderan'; @endphp
         @break
-    @case('staff_P&R')
-        @php $jabatan = 'Staff Public & Relation'; @endphp
+    @case('kord_humas')
+        @php $jabatan = 'Koordinator Humas'; @endphp
         @break
-    @case('kord_tools')
-        @php $jabatan = 'Koordinator Tools & Properties'; @endphp
+    @case('staff_humas')
+        @php $jabatan = 'Staff Humas'; @endphp
         @break
-    @case('staff_tools')
-        @php $jabatan = 'Staff Public & Relation'; @endphp
+    @case('kord_iptek')
+        @php $jabatan = 'Koordinator Iptek'; @endphp
         @break
-    @case('kord_keilmuan')
-        @php $jabatan = 'Koordinator Keilmuan'; @endphp
+    @case('staff_iptek')
+        @php $jabatan = 'Staff Iptek'; @endphp
         @break
-    @case('kord_program')
-        @php $jabatan = 'Koordinator Program'; @endphp
+    @case('kord_kesek')
+        @php $jabatan = 'Koordinator Kesekretariatan'; @endphp
         @break
-    @case('staff_program')
-        @php $jabatan = 'Staff Program'; @endphp
+    @case('staff_kesek')
+        @php $jabatan = 'Staff Kesekretariatan'; @endphp
         @break
-    @case('kord_jaringan')
-        @php $jabatan = 'Koordinator Jaringan'; @endphp
-        @break
-    @case('staff_jaringan')
-        @php $jabatan = 'Staff Jaringan'; @endphp
-        @break
-    @case('kord_hardware')
-        @php $jabatan = 'Koordinator Hardware'; @endphp
-        @break
-    @case('staff_hardware')
-        @php $jabatan = 'Staff Hardware'; @endphp
-        @break
-    @case('kord_multimedia')
-        @php $jabatan = 'Koordinator Multimedia'; @endphp
-        @break
-    @case('staff_multimedia')
-        @php $jabatan = 'Staff Multimedia'; @endphp
-        @break
-    @case('all_crew')
-        @php $jabatan = 'All Crew'; @endphp
+    @case('anggota')
+        @php $jabatan = 'Anggota'; @endphp
         @break
     @default
         $jabatan = 'Ooops';
@@ -110,7 +86,7 @@
       <div class="col-md-3 left_col menu_fixed">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="" class="site_title"><img src="{{ asset('gentella/images/header-logo.png') }}" alt="KeDai" width="200"></a>
+            <a href="" class="site_title">Mib-Ade'Pitue</a>
           </div>
 
           <div class="clearfix"></div>
