@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>papan infromasi digital | KeDai Computerworks</title>
+  <title>papan infromasi digital | Mib-Ade'Pitue</title>
 
   
   <link href="{{ asset('papaninfo/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -22,10 +22,10 @@
   <div class="container">
     <nav class="navbar">
       <a class="navbar-brand " href="#">
-        <img alt="Brand" src="{{ asset('papaninfo/img/logoKDCW.png') }}" class="brand">
+        <img alt="Brand" src="{{ asset('gentella/images/mib.png') }}" class="brand">
       </a>
       <span class="navbar-text">
-        <img src="{{asset('papaninfo/img/header-logo2.png') }}" class="logo">
+        <h3>Mib-Ade'Pitue</h3>
       </span>
     </nav>
 
@@ -67,13 +67,16 @@
 
   <footer>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="pull-right">
-          Papan Informasi Digital - KeDai Computerworks
+          Papan Informasi Digital - Mib-Ade'Pitue
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-8">
         <div class="jam-digital">
+          <div class="kotak">
+            <p id="waktu">Waktu = </p>
+          </div>
           <div class="kotak">
             <p id="jam"></p>
           </div>
@@ -82,6 +85,9 @@
           </div>
           <div class="kotak">
             <p id="detik"></p>
+          </div>
+          <div class="kotak">
+            <p id="wita">Wita</p>
           </div>
         </div>
       </div>
@@ -109,8 +115,8 @@
   function waktu() {
     var waktu = new Date();
     setTimeout("waktu()", 1000);
-    document.getElementById("jam").innerHTML = waktu.getHours();
-    document.getElementById("menit").innerHTML = waktu.getMinutes();
+    document.getElementById("jam").innerHTML = waktu.getHours() + ':';
+    document.getElementById("menit").innerHTML = waktu.getMinutes() + ':';
     document.getElementById("detik").innerHTML = waktu.getSeconds();
   }
 </script>

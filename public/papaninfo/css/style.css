@@ -107,7 +107,9 @@ footer .jam-digital {
 
 footer .jam-digital #jam,
 footer .jam-digital #menit,
-footer .jam-digital #detik {
+footer .jam-digital #detik,
+footer .jam-digital #waktu,
+footer .jam-digital #wita {
   margin-bottom: 0 !important;
   text-align: center;
 }
@@ -118,7 +120,7 @@ footer .jam-digital span {
 
 footer .kotak {
   float: left;
-  width: 40px;
+  width: 60px;
 }
 
 .owl-dots{
